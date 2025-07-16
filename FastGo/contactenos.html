@@ -56,82 +56,426 @@
         </div>
     </nav>
 
-    <!-- Contenido Principal -->
-    <main class="container mt-5 pt-5"> <!-- Contenedor principal del contenido, con márgenes superiores para evitar solapamiento con el navbar fijo -->
+    <div class="container mt-4">
+        <h2 class="mb-4">Nuevo Contacto</h2>
+        <form id="contactForm" novalidate> 
+            <input type="hidden" id="recordId" value=""> 
 
-        <!-- Sección de Contáctenos -->
-        <section id="contact" class="section"> <!-- Sección de Contacto -->
-            <h2 class="text-center text-primary mb-5">Contáctenos</h2> <!-- Título de la sección de contacto -->
-            <div class="row justify-content-center"> <!-- Fila para centrar el formulario de contacto -->
-                <div class="col-md-8"> <!-- Columna para el formulario (ocupa 8 columnas en md y arriba) -->
-                    <p class="text-center lead mb-4">¿Tienes alguna pregunta o necesitas una cotización? ¡No dudes en contactarnos!</p> <!-- Párrafo introductorio del formulario -->
-                    <form> <!-- Formulario de contacto -->
-                        <div class="form-group"> <!-- Grupo de formulario para el nombre -->
-                            <label for="inputName">Nombre Completo</label> <!-- Etiqueta del campo de nombre -->
-                            <input type="text" class="form-control" id="inputName" placeholder="Tu nombre" required> <!-- Campo de entrada de texto para el nombre, requerido -->
-                        </div>
-                        <div class="form-group"> <!-- Grupo de formulario para el correo electrónico -->
-                            <label for="inputEmail">Correo Electrónico</label> <!-- Etiqueta del campo de correo electrónico -->
-                            <input type="email" class="form-control" id="inputEmail" placeholder="tu_correo@ejemplo.com" required> <!-- Campo de entrada de correo electrónico, requerido -->
-                        </div>
-                        <div class="form-group"> <!-- Grupo de formulario para el asunto -->
-                            <label for="inputSubject">Asunto</label> <!-- Etiqueta del campo de asunto -->
-                            <input type="text" class="form-control" id="inputSubject" placeholder="Asunto de tu mensaje" required> <!-- Campo de entrada de texto para el asunto, requerido -->
-                        </div>
-                        <div class="form-group"> <!-- Grupo de formulario para el mensaje -->
-                            <label for="textareaMessage">Mensaje</label> <!-- Etiqueta del campo de mensaje -->
-                            <textarea class="form-control" id="textareaMessage" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea> <!-- Área de texto para el mensaje, con 5 filas, requerido -->
-                        </div>
-                        <div class="text-center"> <!-- Contenedor para centrar el botón de envío -->
-                            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button> <!-- Botón de envío del formulario -->
-                        </div>
-                    </form>
+            <div class="form-group">
+                <label for="inputName">Nombre Completo (*)</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Tu nombre" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa tu nombre completo.
                 </div>
             </div>
 
-            <hr class="my-5"> <!-- Línea divisoria horizontal -->
-
-            <div class="row justify-content-center"> <!-- Fila para centrar la sección de ubicación -->
-                <div class="col-md-10 text-center"> <!-- Columna para el contenido de ubicación -->
-                    <h3 class="text-primary mb-4">Nuestra Ubicación</h3> <!-- Título de la sección de ubicación -->
-                    <!-- Mapa de Google Maps (iframe) -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6318.636146189517!2d-70.58348392450448!3d-33.58517187333641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d7220809e6e7%3A0x1cf3f0a6680f3fd7!2sAv.%20Concha%20y%20Toro%202730%2C%208150215%20Puente%20Alto%2C%20Regi%C3%B3n%20Metropolitana!5e1!3m2!1ses!2scl!4v1750880948454!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- Iframe que incrusta un mapa de Google Maps -->
-                    <p class="mt-3"><strong>Dirección:</strong> Av. Concha y Toro 2730, Puente Alto, Región Metropolitana</p> <!-- Dirección de la empresa -->
-                    <p><strong>Teléfono:</strong> +56 9 1234 5678</p> <!-- Número de teléfono de la empresa -->
-                    <p><strong>Email:</strong> info@fastgo.cl</p> <!-- Correo electrónico de la empresa -->
-                    <p><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</p> <!-- Horario de atención -->
+            <div class="form-group">
+                <label for="inputPhone">Teléfono (*)</label>
+                <input type="tel" class="form-control" id="inputPhone" placeholder="Ej: +56 9 1234 5678" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa un número de teléfono.
                 </div>
             </div>
-        </section>
 
-    </main>
+            <div class="form-group">
+                <label for="inputEmail">Email (*)</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com" required>
+                <div class="invalid-feedback">
+                    Por favor, ingresa un correo electrónico válido.
+                </div>
+            </div>
 
-    
-    <footer class="footer"> <!-- Pie de página del sitio -->
-        <div class="container"> <!-- Contenedor para el contenido del pie de página -->
-            <div class="row"> <!-- Fila para organizar el contenido del pie de página -->
-                <div class="col-md-6 mb-3 mb-md-0"> <!-- Columna para los derechos de autor -->
-                    <p>&copy; 2025 FastGo. Todos los derechos reservados.</p> <!-- Texto de derechos de autor -->
+            <div class="form-group">
+                <label for="selectCountry">País (*)</label>
+                <select class="form-control" id="selectCountry" required>
+                    <option value="">Cargando países...</option>
+                </select>
+                <div class="invalid-feedback">
+                    Por favor, selecciona un país.
                 </div>
-                <div class="col-md-6"> <!-- Columna para los iconos sociales -->
-                    <div class="social-icons"> <!-- Contenedor para los iconos de redes sociales -->
-                        <a href="#" class="mr-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <!-- Enlace a Facebook con icono -->
-                        <a href="#" class="mr-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <!-- Enlace a Twitter con icono -->
-                        <a href="#" class="mr-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <!-- Enlace a Instagram con icono -->
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <!-- Enlace a LinkedIn con icono -->
-                    </div>
+            </div>
+
+            <div class="form-group" id="containerOfficialCountryName">
+                <label for="inputOfficialCountryName">Nombre Oficial del País</label>
+                <input type="text" class="form-control" id="inputOfficialCountryName" readonly />
+            </div>
+
+            <div class="form-group">
+                <label for="textareaComentario">Comentarios (*)</label>
+                <textarea class="form-control" id="textareaComentario" rows="3" required></textarea>
+                <div class="invalid-feedback">
+                    Por favor, ingresa un comentario.
                 </div>
+            </div>
+
+            <div id="div-errores" class="alert alert-danger" style="display: none;">
+                <ul id="lista-errores"></ul>
+            </div>
+
+            <div class="form-group">
+                <small>(*) Campos obligatorios</small><br/><br/>
+                <button class="btn btn-sm btn-warning" id="buttonClean" type="button">Limpiar</button>&nbsp;
+                <button class="btn btn-sm btn-primary" type="submit" id="submitBtn">Enviar Formulario</button>
+                <button class="btn btn-sm btn-secondary ml-2 d-none" type="button" id="cancelEditBtn">Cancelar Edición</button>
+            </div>
+        </form>
+
+        <hr class="my-5">
+
+        <h2 class="mb-4">Listado Contactos</h2>
+        <div id="contactRecordsContainer" class="row">
+            <div class="col-12 text-center" id="mensaje-sin-contactos" style="display:none">
+                <div class="alert alert-warning">No hay contactos para mostrar.</div>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Espera a que el DOM esté completamente cargado antes de ejecutar el script.
+        $(document).ready(function(){
+            // Define una constante para la clave de LocalStorage.
+            const LOCAL_STORAGE_KEY = 'contactos'; 
+            // Carga los contactos existentes desde LocalStorage o inicializa un array vacío si no hay.
+            let dataBase = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
+            // Array para almacenar los datos completos de los países obtenidos de la API.
+            let countriesData = []; 
+
+            // --- Funciones auxiliares ---
+
+            // Función para obtener el nombre oficial de un país dado su código ISO.
+            function getOfficialCountryName(countryCode) {
+                // Busca el país en el array 'countriesData' por su código ISO (cca2).
+                const country = countriesData.find(c => c.cca2 === countryCode);
+                // Retorna el nombre oficial en español si existe, de lo contrario, el nombre oficial en inglés o una cadena vacía.
+                return country ? (country.translations.spa ? country.translations.spa.official : country.name.official) : '';
+            }
+
+            // Función para cargar la lista de países desde la API REST Countries.
+            function loadCountries() {
+                // Realiza una solicitud AJAX (Asynchronous JavaScript and XML) GET a la API.
+                $.ajax({
+                    url: 'https://restcountries.com/v3.1/lang/spanish', // URL de la API para países que hablan español.
+                    method: 'GET', // Método HTTP de la solicitud.
+                    success: function(data) {
+                        // Se ejecuta si la solicitud es exitosa.
+                        // Almacena los datos completos y los ordena alfabéticamente por su nombre común en español.
+                        countriesData = data.sort((a, b) => {
+                            const nameA = a.translations.spa ? a.translations.spa.common : a.name.common;
+                            const nameB = b.translations.spa ? b.translations.spa.common : b.name.common;
+                            return nameA.localeCompare(nameB); // Compara los nombres para ordenar.
+                        });
+
+                        // Selecciona el elemento <select> con ID 'selectCountry'.
+                        const $countrySelect = $('#selectCountry');
+                        $countrySelect.empty(); // Limpia cualquier opción existente.
+                        // Añade la opción por defecto.
+                        $countrySelect.append('<option value="">Seleccione País</option>');
+                        
+                        // Itera sobre cada país obtenido y añade una opción al selector.
+                        countriesData.forEach(function(country){
+                            // Obtiene el nombre común del país en español.
+                            const countryName = country.translations.spa ? country.translations.spa.common : country.name.common;
+                            // Añade la opción, usando el código ISO (cca2) como valor y el nombre común como texto visible.
+                            $countrySelect.append(`<option value="${country.cca2}">${countryName}</option>`);
+                        });
+                        // Si la API carga correctamente, elimina cualquier campo de entrada de 'otro país' si existiera.
+                        // $('#otherCountry').remove(); 
+                    },
+                    error: function() {
+                        // Se ejecuta si la solicitud falla.
+                        alert("No se pudo cargar la lista de países desde la API. Por favor, recarga la página o intenta más tarde.");
+                        // Muestra un mensaje de error en el selector de país.
+                        $('#selectCountry').empty().append('<option value="">Error al cargar países</option>');
+                    }
+                });
+            }
+
+            // Llama a la función para cargar los países al iniciar la aplicación.
+            loadCountries();
 
 
-    <!-- Scripts JS de Bootstrap y sus dependencias (jQuery y Popper.js) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script> <!-- Enlaza jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script> <!-- Enlaza Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script> <!-- Enlaza Bootstrap JS -->
-    <!-- Font Awesome para iconos sociales -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script> <!-- Enlaza la librería de iconos Font Awesome -->
 
+            // Escucha el evento 'change' en el selector de país.
+            $('#selectCountry').on('change', function() {
+                // Obtiene el código del país seleccionado.
+                const selectedCountryCode = $(this).val();
+                if (selectedCountryCode) {
+                    // Si se seleccionó un país, llena el campo 'Nombre Oficial del País'.
+                    $('#inputOfficialCountryName').val(getOfficialCountryName(selectedCountryCode));
+                    // Muestra el contenedor del campo de nombre oficial.
+                    $('#containerOfficialCountryName').show(); 
+                } else {
+                    // Si no se seleccionó ningún país, limpia el campo y lo oculta.
+                    $('#inputOfficialCountryName').val('');
+                    $('#containerOfficialCountryName').hide(); 
+                }
+            });
+
+            // Función para mostrar/actualizar los registros de contacto en la interfaz.
+            function displayRecords() {
+                // Obtiene los registros actuales de LocalStorage.
+                const records = getRecords();
+                // Selecciona el contenedor donde se mostrarán las tarjetas de contacto.
+                const $container = $('#contactRecordsContainer');
+                $container.empty(); // Limpia el contenido actual del contenedor.
+
+                if (records.length === 0) {
+                    // Si no hay registros, muestra el mensaje de "No hay contactos".
+                    $('#mensaje-sin-contactos').show();
+                } else {
+                    // Si hay registros, oculta el mensaje de "No hay contactos".
+                    $('#mensaje-sin-contactos').hide();
+                    // Itera sobre cada registro y crea una tarjeta para mostrarlo.
+                    records.forEach(record => {
+                        const cardHtml = `
+                            <div class="col-md-6 col-lg-4 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title">${record.name || 'Sin Nombre'}</h5>
+                                        <p class="card-text"><strong>Teléfono:</strong> ${record.phone || 'N/A'}</p>
+                                        <p class="card-text"><strong>Email:</strong> ${record.email}</p>
+                                        <p class="card-text"><strong>País:</strong> ${record.countryName || record.pais} (${record.officialCountryName || 'N/A'})</p>
+                                        <p class="card-text"><strong>Comentarios:</strong> ${record.comentarios}</p>
+                                        <button class="btn btn-info btn-sm edit-btn" data-id="${record.id}">Editar</button>
+                                        <button class="btn btn-danger btn-sm delete-btn ml-2" data-id="${record.id}">Eliminar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        $container.append(cardHtml); // Añade la tarjeta al contenedor.
+                    });
+                }
+            }
+
+            // Función para obtener los registros de LocalStorage.
+            function getRecords() {
+                // Obtiene la cadena JSON de LocalStorage.
+                const records = localStorage.getItem(LOCAL_STORAGE_KEY);
+                // Parsea la cadena a un objeto JavaScript o devuelve un array vacío si no hay datos.
+                return records ? JSON.parse(records) : [];
+            }
+
+            // Función para guardar los registros en LocalStorage.
+            function saveRecords(records) {
+                // Convierte el array de objetos JavaScript a una cadena JSON y la guarda en LocalStorage.
+                localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(records));
+            }
+
+            // Muestra los registros existentes al cargar la página por primera vez.
+            displayRecords();
+
+            // Escucha el evento 'click' en el botón 'Limpiar'.
+            $('#buttonClean').on('click', function() {
+                // Pide confirmación al usuario antes de limpiar el formulario.
+                if (confirm('¿Está seguro que desea limpiar el formulario?')) {
+                    $('#contactForm')[0].reset(); // Resetea todos los campos del formulario.
+                    $('#inputOfficialCountryName').val(''); // Limpia manualmente el campo oficial del país.
+                    $('#recordId').val(''); // Limpia el ID del registro en edición.
+                    $('#submitBtn').text('Enviar Formulario'); // Restaura el texto del botón de envío.
+                    $('#cancelEditBtn').addClass('d-none'); // Oculta el botón de cancelar edición.
+                    // Elimina las clases de validación de Bootstrap de todos los campos.
+                    $('#contactForm').find('.form-control').removeClass('is-invalid is-valid');
+                    $('#div-errores').hide(); // Oculta el contenedor de mensajes de error generales.
+                    $('#lista-errores').empty(); // Limpia la lista de errores.
+                }
+            });
+
+            // Escucha el evento 'submit' del formulario de contacto.
+            $('#contactForm').submit(function(e) {
+                e.preventDefault(); // Previene el envío predeterminado del formulario HTML.
+
+                const $form = $(this); // Referencia al formulario.
+                let isValid = true; // Bandera para controlar si el formulario es válido.
+                const errorsList = $('#lista-errores'); // Referencia a la lista de errores generales.
+                errorsList.empty(); // Limpia la lista de errores previos.
+                $('#div-errores').hide(); // Oculta el contenedor de errores al inicio de la validación.
+
+                // Limpia las clases de validación de Bootstrap de todos los campos.
+                $form.find('.form-control').removeClass('is-invalid is-valid');
+
+                // --- Validaciones de cada campo ---
+                const inputName = $('#inputName');
+                const inputPhone = $('#inputPhone');
+                const inputEmail = $('#inputEmail');
+                const selectCountry = $('#selectCountry');
+                const textareaComentario = $('#textareaComentario');
+
+                // Validación del campo Nombre.
+                if (inputName.val().trim() === '') {
+                    inputName.addClass('is-invalid'); // Añade clase de Bootstrap para indicar error.
+                    errorsList.append('<li>El nombre está vacío.</li>'); // Añade error a la lista general.
+                    isValid = false; // Marca el formulario como inválido.
+                } else {
+                    inputName.addClass('is-valid'); // Añade clase de Bootstrap para indicar éxito.
+                }
+
+                // Validación del campo Teléfono.
+                if (inputPhone.val().trim() === '') {
+                    inputPhone.addClass('is-invalid');
+                    errorsList.append('<li>El teléfono está vacío.</li>');
+                    isValid = false;
+                } else {
+                    inputPhone.addClass('is-valid');
+                }
+
+                // Validación del campo Email.
+                if (inputEmail.val().trim() === '') {
+                    inputEmail.addClass('is-invalid');
+                    errorsList.append('<li>El email está vacío.</li>');
+                    isValid = false;
+                } else {
+                    // Expresión regular para validar el formato de email.
+                    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!regex.test(inputEmail.val().trim())) {
+                        inputEmail.addClass('is-invalid');
+                        errorsList.append('<li>El email no tiene un formato válido.</li>');
+                        isValid = false;
+                    } else {
+                        inputEmail.addClass('is-valid');
+                    }
+                }
+
+                // Validación del campo País.
+                if (selectCountry.val() === '') {
+                    selectCountry.addClass('is-invalid');
+                    errorsList.append('<li>Seleccione un país.</li>');
+                    isValid = false;
+                } else {
+                    selectCountry.addClass('is-valid');
+                }
+
+                // Validación del campo Comentarios.
+                if (textareaComentario.val().trim() === '') {
+                    textareaComentario.addClass('is-invalid');
+                    errorsList.append('<li>Debe ingresar un comentario.</li>');
+                    isValid = false;
+                } else {
+                    textareaComentario.addClass('is-valid');
+                }
+
+                // Si 'isValid' es falso (hay errores), muestra el div de errores y detiene la función.
+                if (!isValid) {
+                    $('#div-errores').show();
+                    return; 
+                }
+
+                // --- Recopilación y Almacenamiento de Datos ---
+
+                // Obtiene el ID del registro actual (si se está editando) o genera uno nuevo.
+                const id = $('#recordId').val() || Date.now(); 
+                // Obtiene los valores de todos los campos del formulario.
+                const name = inputName.val().trim();
+                const phone = inputPhone.val().trim();
+                const email = inputEmail.val().trim();
+                const countryCode = selectCountry.val();
+                const countryName = selectCountry.find('option:selected').text(); // Nombre común del país.
+                const officialCountryName = $('#inputOfficialCountryName').val().trim();
+                const comentarios = textareaComentario.val().trim();
+
+                // Crea un objeto con los datos del contacto.
+                const newContact = {
+                    id: id,
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    countryCode: countryCode, // Guarda el código del país para rellenar el select al editar.
+                    countryName: countryName, // Guarda el nombre común para mostrarlo.
+                    officialCountryName: officialCountryName,
+                    comentarios: comentarios
+                };
+
+                let records = getRecords(); // Obtiene la lista actual de registros.
+
+                if ($('#recordId').val()) { // Si el campo 'recordId' tiene un valor, se está editando.
+                    // Mapea el array de registros y actualiza el que coincide con el ID.
+                    records = records.map(record => (record.id == id) ? newContact : record);
+                    alert('Registro actualizado con éxito!'); // Mensaje de éxito para actualización.
+                } else { // Si 'recordId' está vacío, es un nuevo registro.
+                    records.push(newContact); // Añade el nuevo contacto al array.
+                    alert('Contacto guardado exitosamente!'); // Mensaje de éxito para nuevo registro.
+                }
+
+                saveRecords(records); // Guarda el array actualizado en LocalStorage.
+                displayRecords(); // Vuelve a mostrar la lista de registros en la interfaz.
+
+                // --- Limpieza y Restablecimiento del Formulario ---
+                $('#contactForm')[0].reset(); // Resetea el formulario HTML.
+                $('#inputOfficialCountryName').val(''); // Limpia manualmente el campo oficial del país.
+                $('#recordId').val(''); // Limpia el ID oculto de edición.
+                $('#submitBtn').text('Enviar Formulario'); // Restaura el texto del botón.
+                $('#cancelEditBtn').addClass('d-none'); // Oculta el botón de cancelar.
+                $form.find('.form-control').removeClass('is-valid'); // Elimina las clases 'is-valid' (verdes).
+                $('#div-errores').hide(); // Oculta el contenedor de errores generales.
+            });
+
+            // --- Eventos para Editar y Eliminar Registros ---
+
+            // Escucha el evento 'click' en los botones con clase 'edit-btn' (delegación de eventos).
+            $('#contactRecordsContainer').on('click', '.edit-btn', function() {
+                // Obtiene el ID del registro a editar del atributo 'data-id'.
+                const idToEdit = $(this).data('id');
+                const records = getRecords(); // Obtiene todos los registros.
+                // Encuentra el registro específico a editar por su ID.
+                const record = records.find(r => r.id == idToEdit);
+
+                if (record) {
+                    // Rellena los campos del formulario con los datos del registro.
+                    $('#recordId').val(record.id);
+                    $('#inputName').val(record.name);
+                    $('#inputPhone').val(record.phone);
+                    $('#inputEmail').val(record.email);
+                    $('#selectCountry').val(record.countryCode); // Rellena el selector de país.
+                    // Rellena el campo de nombre oficial (usa el valor guardado o lo busca si no existe).
+                    $('#inputOfficialCountryName').val(record.officialCountryName || getOfficialCountryName(record.countryCode));
+                    $('#textareaComentario').val(record.comentarios);
+
+                    // Cambia el texto del botón de envío a 'Actualizar Registro'.
+                    $('#submitBtn').text('Actualizar Registro');
+                    // Muestra el botón de cancelar edición.
+                    $('#cancelEditBtn').removeClass('d-none');
+
+                    // Limpia las clases de validación de Bootstrap para que el usuario pueda empezar a editar sin errores visuales previos.
+                    $('#contactForm').find('.form-control').removeClass('is-invalid is-valid');
+                    $('#div-errores').hide(); // Oculta cualquier mensaje de error general.
+
+                    // Desplaza la ventana suavemente hasta la parte superior del formulario para que sea visible.
+                    $('html, body').animate({
+                        scrollTop: $('#contactForm').offset().top - $('nav.navbar').outerHeight() - 20 // Ajusta la posición de scroll.
+                    }, 500); // Duración de la animación en milisegundos.
+                }
+            });
+
+            // Escucha el evento 'click' en los botones con clase 'delete-btn'.
+            $('#contactRecordsContainer').on('click', '.delete-btn', function() {
+                // Obtiene el ID del registro a eliminar.
+                const idToDelete = $(this).data('id');
+                // Pide confirmación al usuario.
+                if (confirm('¿Estás seguro de que quieres eliminar este registro?')) {
+                    let records = getRecords(); // Obtiene todos los registros.
+                    // Filtra el array, creando uno nuevo sin el registro a eliminar.
+                    records = records.filter(r => r.id != idToDelete);
+                    saveRecords(records); // Guarda el array actualizado en LocalStorage.
+                    displayRecords(); // Vuelve a mostrar la lista de registros.
+                    alert('Registro eliminado exitosamente!'); // Mensaje de éxito.
+                }
+            });
+
+            // Escucha el evento 'click' en el botón 'Cancelar Edición'.
+            $('#cancelEditBtn').on('click', function() {
+                $('#contactForm')[0].reset(); // Resetea el formulario.
+                $('#inputOfficialCountryName').val(''); // Limpia el campo oficial del país.
+                $('#recordId').val(''); // Limpia el ID oculto.
+                $('#submitBtn').text('Enviar Formulario'); // Restaura el texto del botón de envío.
+                $(this).addClass('d-none'); // Oculta el botón de cancelar edición.
+                $('#contactForm').find('.form-control').removeClass('is-invalid is-valid'); // Limpia clases de validación.
+                $('#div-errores').hide(); // Oculta el contenedor de errores.
+                $('#lista-errores').empty(); // Limpia la lista de errores.
+            });
+        });
+    </script>
 </body>
 </html>
