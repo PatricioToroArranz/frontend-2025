@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- establece el idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- especifica la codificación de caracteres a UTF-8 para admitir caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- asegurar la adaptabilidad en dispositivos móviles -->
+    <title>Contáctenos - FastGo</title> <!-- Título que aparece en la pestaña del navegador -->
+
+
+    <!-- Define el icono de la pestaña del navegador utilizando un SVG codificado en base64 para un logo simple "FG" -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-size='90' fill='%23007bff' font-family='Arial, sans-serif'%3EFG%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
+  
+    <!-- Enlaza la hoja de estilos CSS de Bootstrap 4.5.3 desde un CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+   
+    <!-- Enlaza la fuente Montserrat de Google Fonts para el estilo del texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Enlaza la hoja de estilos CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"> <!-- Barra de navegación de Bootstrap: expandible, clara, fondo blanco, fija arriba, con sombra -->
+        <div class="container"> <!-- Contenedor para centrar el contenido de la barra de navegación -->
+            <a class="navbar-brand" href="index.html"> <!-- Enlace de la marca/logo que al hacer clic lleva a la sección "home" -->
+                <!-- SVG de un rayo simple para el logo, representando velocidad -->
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <!-- Icono SVG de un rayo, parte del logo -->
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#007bff"/> <!-- Ruta del SVG que forma el rayo, con color azul -->
+                </svg>
+                FastGo <!-- Texto de la marca -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!-- Botón para el menú hamburguesa en móviles -->
+                <span class="navbar-toggler-icon"></span> <!-- Icono del menú hamburguesa -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav"> <!-- Contenedor colapsable del menú de navegación para móviles -->
+                <ul class="navbar-nav ml-auto"> <!-- Lista de enlaces de navegación, alineada a la derecha (ml-auto) -->
+                    <li class="nav-item"> <!-- Elemento de la lista para el enlace de inicio -->
+                        <a class="nav-link" href="index.html">Inicio</a> <!-- Enlace a la sección de Inicio -->
+                    </li>
+                    <li class="nav-item"> <!-- Elemento de la lista para el enlace "Sobre Nosotros" -->
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a> <!-- Enlaza a la sección "Sobre Nosotros" -->
+                    </li>
+                    <li class="nav-item"> <!-- Elemento de la lista para el enlace "Servicios" -->
+                        <a class="nav-link" href="servicios.html">Servicios</a> <!-- Enlaza a la sección de Servicios -->
+                    </li>
+                    <li class="nav-item active"> <!-- Elemento de la lista para el enlace "Contáctenos" (activo en esta página) -->
+                        <a class="nav-link" href="contactenos.html">Contáctenos <span class="sr-only">(current)</span></a> <!-- Enlaza a la sección de Contáctenos -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container mt-5 pt-5"> <!-- Contenedor principal del contenido, con márgenes superiores para evitar solapamiento con el navbar fijo -->
+
+        <!-- Sección de Contáctenos -->
+        <section id="contact" class="section"> <!-- Sección de Contacto -->
+            <h2 class="text-center text-primary mb-5">Contáctenos</h2> <!-- Título de la sección de contacto -->
+            <div class="row justify-content-center"> <!-- Fila para centrar el formulario de contacto -->
+                <div class="col-md-8"> <!-- Columna para el formulario (ocupa 8 columnas en md y arriba) -->
+                    <p class="text-center lead mb-4">¿Tienes alguna pregunta o necesitas una cotización? ¡No dudes en contactarnos!</p> <!-- Párrafo introductorio del formulario -->
+                    <form> <!-- Formulario de contacto -->
+                        <div class="form-group"> <!-- Grupo de formulario para el nombre -->
+                            <label for="inputName">Nombre Completo</label> <!-- Etiqueta del campo de nombre -->
+                            <input type="text" class="form-control" id="inputName" placeholder="Tu nombre" required> <!-- Campo de entrada de texto para el nombre, requerido -->
+                        </div>
+                        <div class="form-group"> <!-- Grupo de formulario para el correo electrónico -->
+                            <label for="inputEmail">Correo Electrónico</label> <!-- Etiqueta del campo de correo electrónico -->
+                            <input type="email" class="form-control" id="inputEmail" placeholder="tu_correo@ejemplo.com" required> <!-- Campo de entrada de correo electrónico, requerido -->
+                        </div>
+                        <div class="form-group"> <!-- Grupo de formulario para el asunto -->
+                            <label for="inputSubject">Asunto</label> <!-- Etiqueta del campo de asunto -->
+                            <input type="text" class="form-control" id="inputSubject" placeholder="Asunto de tu mensaje" required> <!-- Campo de entrada de texto para el asunto, requerido -->
+                        </div>
+                        <div class="form-group"> <!-- Grupo de formulario para el mensaje -->
+                            <label for="textareaMessage">Mensaje</label> <!-- Etiqueta del campo de mensaje -->
+                            <textarea class="form-control" id="textareaMessage" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea> <!-- Área de texto para el mensaje, con 5 filas, requerido -->
+                        </div>
+                        <div class="text-center"> <!-- Contenedor para centrar el botón de envío -->
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button> <!-- Botón de envío del formulario -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <hr class="my-5"> <!-- Línea divisoria horizontal -->
+
+            <div class="row justify-content-center"> <!-- Fila para centrar la sección de ubicación -->
+                <div class="col-md-10 text-center"> <!-- Columna para el contenido de ubicación -->
+                    <h3 class="text-primary mb-4">Nuestra Ubicación</h3> <!-- Título de la sección de ubicación -->
+                    <!-- Mapa de Google Maps (iframe) -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6318.636146189517!2d-70.58348392450448!3d-33.58517187333641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d7220809e6e7%3A0x1cf3f0a6680f3fd7!2sAv.%20Concha%20y%20Toro%202730%2C%208150215%20Puente%20Alto%2C%20Regi%C3%B3n%20Metropolitana!5e1!3m2!1ses!2scl!4v1750880948454!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <!-- Iframe que incrusta un mapa de Google Maps -->
+                    <p class="mt-3"><strong>Dirección:</strong> Av. Concha y Toro 2730, Puente Alto, Región Metropolitana</p> <!-- Dirección de la empresa -->
+                    <p><strong>Teléfono:</strong> +56 9 1234 5678</p> <!-- Número de teléfono de la empresa -->
+                    <p><strong>Email:</strong> info@fastgo.cl</p> <!-- Correo electrónico de la empresa -->
+                    <p><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</p> <!-- Horario de atención -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="footer"> <!-- Pie de página del sitio -->
+        <div class="container"> <!-- Contenedor para el contenido del pie de página -->
+            <div class="row"> <!-- Fila para organizar el contenido del pie de página -->
+                <div class="col-md-6 mb-3 mb-md-0"> <!-- Columna para los derechos de autor -->
+                    <p>&copy; 2025 FastGo. Todos los derechos reservados.</p> <!-- Texto de derechos de autor -->
+                </div>
+                <div class="col-md-6"> <!-- Columna para los iconos sociales -->
+                    <div class="social-icons"> <!-- Contenedor para los iconos de redes sociales -->
+                        <a href="#" class="mr-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <!-- Enlace a Facebook con icono -->
+                        <a href="#" class="mr-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <!-- Enlace a Twitter con icono -->
+                        <a href="#" class="mr-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <!-- Enlace a Instagram con icono -->
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <!-- Enlace a LinkedIn con icono -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts JS de Bootstrap y sus dependencias (jQuery y Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script> <!-- Enlaza jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script> <!-- Enlaza Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script> <!-- Enlaza Bootstrap JS -->
+    <!-- Font Awesome para iconos sociales -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script> <!-- Enlaza la librería de iconos Font Awesome -->
+
+</body>
+</html>

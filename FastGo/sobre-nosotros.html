@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- establece el idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- especifica la codificación de caracteres a UTF-8 para admitir caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- asegurar la adaptabilidad en dispositivos móviles -->
+    <title>Sobre Nosotros - FastGo</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    
+    <!-- Define el icono de la pestaña del navegador utilizando un SVG codificado en base64 para un logo simple "FG" -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-size='90' fill='%23007bff' font-family='Arial, sans-serif'%3EFG%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
+   
+    <!-- Enlaza la hoja de estilos CSS de Bootstrap 4.5.3 desde un CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+    
+    <!-- Enlaza la fuente Montserrat de Google Fonts para el estilo del texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Enlaza la hoja de estilos CSS-->
+    <link rel="stylesheet" href="style.css">
+
+   
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"> <!-- Barra de navegación de Bootstrap expandible -->
+        <div class="container"> <!-- Contenedor para centrar el contenido de la barra de navegación -->
+            <a class="navbar-brand" href="index.html"> <!-- Enlace de la marca/logo que al hacer clic lleva a la sección "home" -->
+                <!-- SVG de un rayo simple para el logo, representando velocidad -->
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <!-- Icono SVG de un rayo, parte del logo -->
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#007bff"/> <!-- Ruta del SVG que forma el rayo, con color azul -->
+                </svg>
+                FastGo <!-- Texto de la marca -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!-- Botón para el menú hamburguesa en móviles -->
+                <span class="navbar-toggler-icon"></span> <!-- Icono del menú hamburguesa -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav"> <!-- Contenedor colapsable del menú de navegación para móviles -->
+                <ul class="navbar-nav ml-auto"> <!-- Lista de enlaces de navegación, alineada a la derecha (ml-auto) -->
+                    <li class="nav-item"> <!-- Elemento de la lista para el enlace de inicio -->
+                        <a class="nav-link" href="index.html">Inicio</a> <!-- Enlace a la sección de Inicio -->
+                    </li>
+                    <li class="nav-item active"> <!-- Elemento de la lista para el enlace "Sobre Nosotros" (activo en esta página) -->
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros <span class="sr-only">(current)</span></a> <!-- Enlaza a la sección "Sobre Nosotros" -->
+                    </li>
+                    <li class="nav-item"> <!-- Elemento de la lista para el enlace "Servicios" -->
+                        <a class="nav-link" href="servicios.html">Servicios</a> <!-- Enlaza a la sección de Servicios -->
+                    </li>
+                    <li class="nav-item"> <!-- Elemento de la lista para el enlace "Contáctenos" -->
+                        <a class="nav-link" href="contactenos.html">Contáctenos</a> <!-- Enlaza a la sección de Contáctenos -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container mt-5 pt-5"> <!-- Contenedor principal del contenido, con márgenes superiores para evitar solapamiento con el navbar fijo -->
+
+        <!-- Sobre Nosotros -->
+        <section id="about" class="section"> <!-- Sección "Sobre Nosotros" -->
+            <h2 class="text-center text-primary mb-5">Sobre FastGo</h2> <!-- Título de la sección -->
+
+            <div class="row"> <!-- Fila para la historia de la empresa e imagen -->
+                <div class="col-md-6 mb-4"> <!-- Columna para la imagen -->
+                    <img src="images/equipo trabajo.jpg" alt="Equipo FastGo" class="img-fluid rounded-lg shadow-sm"> <!-- Imagen de marcador de posición para el equipo -->
+                </div>
+                <div class="col-md-6 mb-4"> <!-- Columna para el texto de la historia -->
+                    <h3>Nuestra Historia</h3> <!-- Subtítulo de historia -->
+                    <p>Fundada en 2020, FastGo nació de la necesidad de optimizar las entregas urbanas en un mundo cada vez más acelerado. Iniciamos con un pequeño equipo de repartidores y una visión clara: revolucionar la logística. Desde entonces, hemos crecido exponencialmente, expandiendo nuestra flota y adoptando tecnologías innovadoras para ofrecer un servicio inigualable.</p> <!-- Primer párrafo de la historia -->
+                    <p>Nos enorgullece ser un pilar fundamental para empresas y particulares que buscan eficiencia y rapidez en sus envíos. Creemos en la importancia de cada entrega y en la conexión que generamos entre personas y negocios.</p> <!-- Segundo párrafo de la historia -->
+                </div>
+            </div>
+
+            <div class="row mt-5"> <!-- Fila para Misión, Visión y Valores -->
+                <div class="col-md-4 mb-4"> <!-- Columna para la Misión -->
+                    <h4 class="text-primary">Misión</h4> <!-- Título-->
+                    <p>Ser la empresa líder en soluciones de entrega express urbana, brindando un servicio ágil, seguro y confiable que supere las expectativas de nuestros clientes, apoyándonos en la innovación tecnológica y un equipo comprometido.</p> <!-- Descripción de la Misión -->
+                </div>
+                <div class="col-md-4 mb-4"> <!-- Columna para la Visión -->
+                    <h4 class="text-primary">Visión</h4> <!-- Título-->
+                    <p>Transformar la logística, estableciendo nuevos estándares de eficiencia y sostenibilidad, y expandiendo nuestra presencia para conectar cada rincón de la ciudad, facilitando el comercio y la vida diaria de nuestros usuarios.</p> <!-- Descripción de la Visión -->
+                </div>
+                <div class="col-md-4 mb-4"> <!-- Columna para los Valores -->
+                    <h4 class="text-primary">Valores</h4> <!-- Título -->
+                    <ul> <!-- Lista de valores -->
+                        <li><strong>Rapidez:</strong> Nos comprometemos a entregar en el menor tiempo posible.</li> <!-- Valor: Rapidez -->
+                        <li><strong>Fiabilidad:</strong> Garantizamos la seguridad y la integridad de cada envío.</li> <!-- Valor: Fiabilidad -->
+                        <li><strong>Innovación:</strong> Adoptamos nuevas tecnologías para mejorar continuamente.</li> <!-- Valor: Innovación -->
+                        <li><strong>Servicio al Cliente:</strong> Ponemos al cliente en el centro de todas nuestras operaciones.</li> <!-- Valor: Servicio al Cliente -->
+                        <li><strong>Sostenibilidad:</strong> Buscamos prácticas que minimicen nuestro impacto ambiental.</li> <!-- Valor: Sostenibilidad -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-5"> <!-- Fila para la sección de Equipo -->
+                <div class="col-12 text-center"> <!-- Columna para el título del equipo -->
+                    <h4 class="text-primary mb-4">Nuestro Equipo</h4> <!-- Título de la sección de Equipo -->
+                    <div class="row justify-content-center"> <!-- Fila anidada para las tarjetas de miembros del equipo, centradas -->
+                        <div class="col-md-3 col-sm-6 mb-4"> <!-- Columna para la tarjeta del DG -->
+                            <div class="card p-3"> <!-- Tarjeta del miembro del equipo -->
+                                <img src="images/director general.jpg" class="rounded-circle mx-auto d-block mb-3" alt="DG"> <!-- Imagen de marcador de posición para el director general -->
+                                <h5>Patricio Toro</h5> <!-- Nombre del DG -->
+                                <p class="text-muted">Director General</p> <!-- Cargo del DG -->
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4"> <!-- Columna para la tarjeta del DO -->
+                            <div class="card p-3"> <!-- Tarjeta del miembro del equipo -->
+                                <img src="images/director operaciones.jpg" class="rounded-circle mx-auto d-block mb-3" alt="DO"> <!-- Imagen de marcador de posición para el DO -->
+                                <h5>Matías Mora</h5> <!-- Nombre del DO -->
+                                <p class="text-muted">Director de Operaciones</p> <!-- Cargo del DO -->
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 mb-4"> <!-- Columna para la tarjeta del DT -->
+                            <div class="card p-3"> <!-- Tarjeta del miembro del equipo -->
+                                <img src="images/director tegnologia.jpg" class="rounded-circle mx-auto d-block mb-3" alt="DT"> <!-- Imagen de marcador de posición para el DT -->
+                                <h5>Giovanni Di Rosa</h5> <!-- Nombre del DT -->
+                                <p class="text-muted">Director de Tecnología</p> <!-- Cargo del DT -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="footer"> <!-- Pie de página del sitio -->
+        <div class="container"> <!-- Contenedor para el contenido del pie de página -->
+            <div class="row"> <!-- Fila para organizar el contenido del pie de página -->
+                <div class="col-md-6 mb-3 mb-md-0"> <!-- Columna para los derechos de autor -->
+                    <p>&copy; 2025 FastGo. Todos los derechos reservados.</p> <!-- Texto de derechos de autor -->
+                </div>
+                <div class="col-md-6"> <!-- Columna para los iconos sociales -->
+                    <div class="social-icons"> <!-- Contenedor para los iconos de redes sociales -->
+                        <a href="#" class="mr-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <!-- Enlace a Facebook con icono -->
+                        <a href="#" class="mr-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <!-- Enlace a Twitter con icono -->
+                        <a href="#" class="mr-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <!-- Enlace a Instagram con icono -->
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <!-- Enlace a LinkedIn con icono -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+    <!-- Scripts JS de Bootstrap y sus dependencias (jQuery y Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script> <!-- Enlaza jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script> <!-- Enlaza Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script> <!-- Enlaza Bootstrap JS -->
+    <!-- Font Awesome para iconos sociales -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script> <!-- Enlaza la librería de iconos Font Awesome -->
+
+</body>
+</html>

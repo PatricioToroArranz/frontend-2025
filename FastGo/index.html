@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- establece el idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- especifica la codificación de caracteres a UTF-8 para admitir caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- asegurar la adaptabilidad en dispositivos móviles -->
+    <title>FastGo - Tu Entrega Express</title> <!-- título que aparece en la pestaña del navegador -->
+
+    
+    <!-- define el icono de la pestaña del navegador utilizando un SVG para el logo "FG" -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-size='90' fill='%23007bff' font-family='Arial, sans-serif'%3EFG%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
+    
+    <!-- enlaza la hoja de estilos CSS de Bootstrap 4.5.3 desde un CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+    <!-- enlaza la fuente Montserrat de Google Fonts para el estilo del texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- enlaza la hoja de estilos CSS-->
+    <link rel="stylesheet" href="style.css">
+
+
+
+    
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"> <!-- barra de navegación expandible -->
+        <div class="container"> <!-- contenedor para centrar el contenido de la barra de navegación -->
+            <a class="navbar-brand" href="index.html"> <!-- enlace de la marca/logo que al hacer clic lleva a la sección "home" -->
+                
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <!-- icono SVG de un rayo, parte del logo -->
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#007bff"/> <!-- ruta del SVG que forma el rayo -->
+                </svg>
+                FastGo <!-- texto de la marca -->
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!-- Botón para el menú hamburguesa en móviles -->
+                <span class="navbar-toggler-icon"></span> <!-- icono del menu hamburguesa -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav"> <!-- contenedor colapsable del menú de navegación para móviles -->
+                <ul class="navbar-nav ml-auto"> <!-- lista de enlaces de navegación, alineada a la derecha (ml-auto) -->
+                    <li class="nav-item active"> <!-- elemento de la lista para el enlace de inicio (activo en esta página) -->
+                        <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a> <!-- enlace a la sección de Inicio -->
+                    </li>
+                    <li class="nav-item"> <!-- elemento de la lista para el enlace "Sobre Nosotros" -->
+                        <a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a> <!-- enlaza a la sección "Sobre Nosotros" -->
+                    </li>
+                    <li class="nav-item"> <!-- elemento de la lista para el enlace "Servicios" -->
+                        <a class="nav-link" href="servicios.html">Servicios</a> <!-- enlaza a la sección de Servicios -->
+                    </li>
+                    <li class="nav-item"> <!-- elemento de la lista para el enlace "Contáctenos" -->
+                        <a class="nav-link" href="contactenos.html">Contáctenos</a> <!-- enlaza a la sección de Contáctenos -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container mt-5 pt-5"> <!-- contenedor principal del contenido, con márgenes superiores para evitar solapamiento con el navbar fijo -->
+
+        <!-- Sección de Inicio (Home) -->
+        <section id="home" class="section"> <!-- Sección de inicio -->
+            <!-- Carrusel de Imágenes -->
+            <div id="carouselExampleIndicators" class="carousel slide rounded-lg overflow-hidden mb-5" data-ride="carousel"> <!-- Carrusel de Bootstrap con indicadores -->
+                <ol class="carousel-indicators"> <!-- Indicadores de diapositivas del carrusel -->
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li> <!-- Indicador para la primera diapositiva (activa) -->
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> <!-- Indicador para la segunda diapositiva -->
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> <!-- Indicador para la tercera diapositiva -->
+                </ol>
+                <div class="carousel-inner"> <!-- Contenedor de las diapositivas del carrusel -->
+                    <div class="carousel-item active"> <!-- Primera diapositiva del carrusel, activa -->
+                        <img src="images/entrega express.jpg" class="d-block w-100" alt="Entrega Express"> <!-- Imagen de marcador de posición para "Entrega Express" -->
+                        <div class="carousel-caption d-none d-md-block"> <!-- Pie de foto del carrusel, visible en pantallas medianas y grandes -->
+                            <h5>Velocidad y Fiabilidad en Cada Entrega</h5> <!-- Título del pie de foto -->
+                            <p>Tus paquetes llegan a tiempo, siempre. Confía en FastGo para tus envíos más urgentes.</p> <!-- Descripción del pie de foto -->
+                            <a href="servicios.html" class="btn btn-primary mt-3">Nuestros Servicios</a> <!-- Botón de llamada a la acción que lleva a la página de servicios -->
+                        </div>
+                    </div>
+                    <div class="carousel-item"> <!-- Segunda diapositiva del carrusel -->
+                        <img src="images/seguimiento en tiempo real.jpg" class="d-block w-100" alt="Seguimiento en Tiempo Real"> <!-- Imagen de marcador de posición para "Seguimiento en Tiempo Real" -->
+                        <div class="carousel-caption d-none d-md-block"> <!-- Pie de foto de la segunda diapositiva -->
+                            <h5>Rastrea Tu Envío en Cada Paso</h5> <!-- Título del pie de foto -->
+                            <p>Con nuestra app, sabrás exactamente dónde está tu paquete, desde la recolección hasta la entrega.</p> <!-- Descripción del pie de foto -->
+                            <a href="servicios.html" class="btn btn-primary mt-3">Más Información</a> <!-- Botón de llamada a la acción -->
+                        </div>
+                    </div>
+                    <div class="carousel-item"> <!-- Tercera diapositiva del carrusel -->
+                        <img src="images/soluciones empresariales.jpg" class="d-block w-100" alt="Soluciones Empresariales"> <!-- Imagen de marcador de posición para "Soluciones Empresariales" -->
+                        <div class="carousel-caption d-none d-md-block"> <!-- Pie de foto de la tercera diapositiva -->
+                            <h5>Soluciones Logísticas para Tu Negocio</h5> <!-- Título del pie de foto -->
+                            <p>Optimizamos tus entregas con planes personalizados para empresas de todos los tamaños.</p> <!-- Descripción del pie de foto -->
+                            <a href="contactenos.html" class="btn btn-primary mt-3">Contáctanos</a> <!-- Botón de llamada a la acción que lleva a la página de contacto -->
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"> <!-- Control para ir a la diapositiva anterior -->
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span> <!-- Icono de flecha hacia la izquierda -->
+                    <span class="sr-only">Anterior</span> <!-- Texto para lectores de pantalla -->
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"> <!-- Control para ir a la diapositiva siguiente -->
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span> <!-- Icono de flecha hacia la derecha -->
+                    <span class="sr-only">Siguiente</span> <!-- Texto para lectores de pantalla -->
+                </a>
+            </div>
+
+            <!-- Sección de Contenido Principal -->
+            <div class="jumbotron mt-5"> <!-- Otro jumbotron para la sección de bienvenida -->
+                <h1 class="display-4 text-primary">¡Bienvenido a FastGo!</h1> <!-- Título principal de bienvenida -->
+                <p class="lead">Tu socio confiable para entregas rápidas y seguras en toda la ciudad. Con FastGo, tus envíos están en buenas manos.</p> <!-- Párrafo introductorio -->
+                <hr class="my-4"> <!-- Línea divisoria horizontal -->
+                <p>Ofrecemos un servicio de reparto eficiente, utilizando tecnología de punta para garantizar la puntualidad y el seguimiento en tiempo real de cada paquete. Desde documentos urgentes hasta paquetes de gran volumen, FastGo es la solución.</p> <!-- Descripción adicional del servicio -->
+                <a class="btn btn-primary btn-lg" href="sobre-nosotros.html" role="button">Conoce Más</a> <!-- Botón para ir a la sección "Sobre Nosotros" -->
+            </div>
+
+            <div class="row text-center my-5"> <!-- Fila de tarjetas de características con texto centrado -->
+                <div class="col-md-4 mb-4"> <!-- Columna para la primera tarjeta (ocupa 4 columnas en md y arriba) -->
+                    <div class="card p-3"> <!-- Tarjeta con espaciado interno -->
+                        <h4 class="text-primary">Entrega Rápida</h4> <!-- Título de la característica -->
+                        <p>Llegamos a tu destino en tiempo récord.</p> <!-- Descripción de la característica -->
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4"> <!-- Columna para la segunda tarjeta -->
+                    <div class="card p-3"> <!-- Tarjeta con espaciado interno -->
+                        <h4 class="text-primary">Seguimiento en Vivo</h4> <!-- Título de la característica -->
+                        <p>Controla tu envío en cada etapa del camino.</p> <!-- Descripción de la característica -->
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4"> <!-- Columna para la tercera tarjeta -->
+                    <div class="card p-3"> <!-- Tarjeta con espaciado interno -->
+                        <h4 class="text-primary">Servicio Confiable</h4> <!-- Título de la característica -->
+                        <p>Profesionalismo y seguridad garantizada.</p> <!-- Descripción de la característica -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer class="footer"> <!-- Pie de página del sitio -->
+        <div class="container"> <!-- Contenedor para el contenido del pie de página -->
+            <div class="row"> <!-- Fila para organizar el contenido del pie de página -->
+                <div class="col-md-6 mb-3 mb-md-0"> <!-- Columna para los derechos de autor -->
+                    <p>&copy; 2025 FastGo. Todos los derechos reservados.</p> <!-- Texto de derechos de autor -->
+                </div>
+                <div class="col-md-6"> <!-- Columna para los iconos sociales -->
+                    <div class="social-icons"> <!-- Contenedor para los iconos de redes sociales -->
+                        <a href="#" class="mr-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> <!-- Enlace a Facebook con icono -->
+                        <a href="#" class="mr-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a> <!-- Enlace a Twitter con icono -->
+                        <a href="#" class="mr-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a> <!-- Enlace a Instagram con icono -->
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> <!-- Enlace a LinkedIn con icono -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JS de Bootstrap y sus dependencias (jQuery y Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script> <!-- Enlaza jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" crossorigin="anonymous"></script> <!-- Enlaza Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script> <!-- Enlaza Bootstrap JS -->
+    <!-- Font Awesome para iconos sociales -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script> <!-- Enlaza la librería de iconos Font Awesome -->
+
+</body>
+</html>
